@@ -1,0 +1,29 @@
+{
+  "name": "vue-graphql-full-stack",
+  "version": "1.0.0",
+  "description": "VueJS 3 and graphQL",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "vuejs-graphQL"
+  },
+  "author": "Nicky",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.2",
+    "bcrypt": "^3.0.4",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.1.1",
+    "jsonwebtoken": "^8.4.0",
+    "md5": "^2.2.1",
+    "mongoose": "^5.4.14"
+  }
+}
