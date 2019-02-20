@@ -1,6 +1,7 @@
 node_modules
 client/node_modules
 client/dist
+variables.env
 
 # local env files
 client/.env.local
