@@ -11,6 +11,7 @@ type User {
 }
 
 type Post {
+  _id: ID
   title: String!
   imageUrl: String! 
   categories: [String]!
@@ -29,13 +30,26 @@ type Message {
   
 }
 
+type Token {
+  token: String!
+
+}
+
 type Query {
+  getCurrentUser: User
   getPosts: [Post]
 }
 
 type Mutation {
-  addPost(title: String!, imageUrl: String!, categories: [String]!, description: String!, creatorId: ID!): Post!
-  signupUser( username: String!, email: String!, password:String! ): User!
+  addPost(
+    title: String!
+    imageUrl: String!
+    categories: [String]!
+    description: String!
+    creatorId: ID!
+  ): Post!
+  signinUser( email: String!, password: String ): Token
+  signupUser(username: String!, email: String!, password: String!): Token
 }
 
 
