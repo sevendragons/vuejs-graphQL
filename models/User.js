@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const md5 = require('md5');
 const bcrypt = require('bcrypt');
+const crypto = require('crypto');
+
 
 const UserSchema = mongoose.Schema({
   username: {
@@ -39,7 +41,7 @@ const UserSchema = mongoose.Schema({
 
 // Create and add avatar to user
 UserSchema.pre('save', function (next) {
-  this.avatar = `http://gravatar.com/avatar/${md5(this.username)}?d=identicon`;
+  this.avatar = `http://gravatar.com/avatar/${md5(this.email)}?d=identicon`;
   next();
 });
 

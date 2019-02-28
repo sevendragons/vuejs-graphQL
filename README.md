@@ -4,6 +4,8 @@
 
 🌟🌟 **Code for graphQL** 🌟🌟
 
+🌟🌟🌟🌟 ***Video Part 15 and 16*** 🌟🌟🌟🌟
+
 ```
   query {
     getTodos{
@@ -36,7 +38,7 @@
     imageUrl
     categories
     description
-    createDate
+    createdDate
     likes
   }
 }`
@@ -48,7 +50,7 @@
     imageUrl
     categories
     description
-    createDate
+    createdDate
     likes
     createBy {
       _id

@@ -1,12 +1,16 @@
 # /*-------------- Type Definition --------------*/
   # username: String! @unique    // not working
+  # 🐳 🎯 ♥️
+
+scalar Date
+
 type User {
   _id: ID
   username: String!
   email: String!
   password: String!
   avatar: String
-  joinDate: String
+  joinDate: Date
   favorites: [Post]
 }
 
@@ -16,28 +20,39 @@ type Post {
   imageUrl: String! 
   categories: [String]!
   description: String!
-  createDate: String
+  createdDate: Date
   likes: Int,
   createdBy: User!,
-  message: [Message]
+  messages: [Message]
 }
 
 type Message {
   _id: ID
   messageBody: String!
-  messageDate: String
+  messageDate: Date
   messageUser: User!
-  
+}
+
+type LikesPost {
+  # Likes for Post / Favorites for user Post
+  likes: Int
+  favorites:[Post]
 }
 
 type Token {
   token: String!
-
+}
+type PostsPage{
+  posts: [Post]
+  hasMore: Boolean
 }
 
 type Query {
   getCurrentUser: User
   getPosts: [Post]
+  getPost(postId: ID!): Post!
+  infiniteScrollPosts(pageNum: Int!, pageSize: Int!): PostsPage
+  searchPosts(searchTerm: String): [Post]
 }
 
 type Mutation {
@@ -48,6 +63,13 @@ type Mutation {
     description: String!
     creatorId: ID!
   ): Post!
+  deleteUserPost(postId: ID!): Post!
+  deleteMessagePost(messageId: ID!): Message!
+  addPostMessage(messageBody: String!, userId: ID!, postId: ID!): Message!
+  
+  likePost(postId: ID!, username: String!): LikesPost!
+  unlikePost(postId: ID!, username: String!): LikesPost!
+  
   signinUser( email: String!, password: String ): Token
   signupUser(username: String!, email: String!, password: String!): Token
 }

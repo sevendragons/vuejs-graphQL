@@ -17,8 +17,8 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  createDate: {
-    type: String,
+  createdDate: {
+    type: Date,
     default: Date.now
   },
   likes: {
@@ -33,7 +33,7 @@ const PostSchema = new mongoose.Schema({
     ref: 'User'
   },
   messages: [{
-    messgaeBody: {
+    messageBody: {
       type: String,
       required:true
     },
@@ -49,5 +49,10 @@ const PostSchema = new mongoose.Schema({
   }]
 
 });
+
+// create index to search on all fields of posts
+PostSchema.index({
+  '$**': 'text'
+})
 
 module.exports = mongoose.model( 'Post', PostSchema );
