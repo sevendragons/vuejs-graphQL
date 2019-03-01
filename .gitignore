@@ -1,7 +1,7 @@
 node_modules
 client/node_modules
 client/dist
-variables.env
+# variables.env
 now.json
 now-secretes.json
 

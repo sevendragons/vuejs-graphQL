@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "server": "nodemon server.js",
+    "server": "nodemon -r now-env server.js",
     "client": "cd client && npm run serve",
     "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\""
   },
@@ -31,5 +31,8 @@
     "md5": "^2.2.1",
     "mongoose": "^5.4.14",
     "now-env": "^3.1.0"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
