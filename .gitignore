@@ -7,19 +7,19 @@ now.json
 now-secretes.json
 
 # local env files
-client/.env.local
-client/.env.*.local
-client/
+# client/.env.local
+# client/.env.*.local
+
 # Log files
-client/npm-debug.log*
-client/yarn-debug.log*
-client/yarn-error.log*
+# client/npm-debug.log*
+# client/yarn-debug.log*
+# client/yarn-error.log*
 
 # Editor directories and files
-client/.idea
-client/.vscode
-client/*.suo
-client/*.ntvs*
-client/*.njsproj
-client/*.sln
-client/*.sw*
+# client/.idea
+# client/.vscode
+# client/*.suo
+# client/*.ntvs*
+# client/*.njsproj
+# client/*.sln
+# client/*.sw*
