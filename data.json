@@ -111,5 +111,17 @@
     "title": "Abstract Art",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Vassily_Kandinsky%2C_1923_-_Circles_in_a_Circle.jpg",
     "description": "A neat painting by Kandinsky 🦀"
+  },
+  {
+    "categories": ["Art"],
+    "title": "Michelangelo",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Creaci%C3%B3n_de_Ad%C3%A1n_%28Miguel_%C3%81ngel%29.jpg",
+    "description": "The Creation of Adam 🦀 👋 🎩 🚚"
+  }
+  {
+    "categories": ["Art"],
+    "title": "I dont know",
+    "imageUrl": "https://i.pinimg.com/originals/ed/a2/79/eda279feb02f6f9609d66bb73a72e945.jpg",
+    "description": "The Last Super with Jesus 🤞☨ ✠ ✟ ♱"
   }
 ]
