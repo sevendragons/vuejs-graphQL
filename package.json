@@ -29,6 +29,7 @@
     "https": "^1.0.0",
     "jsonwebtoken": "^8.4.0",
     "md5": "^2.2.1",
-    "mongoose": "^5.4.14"
+    "mongoose": "^5.4.14",
+    "now-env": "^3.1.0"
   }
 }

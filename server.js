@@ -11,6 +11,7 @@ const resolvers = require ('./graphQL/resolvers')
 
 /*-------------- import Environment Variables and Mongoose Models --------------*/
 require("dotenv").config({ path: "variables.env" });
+// require('now-env');
 const User = require ('./models/User');
 const Post = require ('./models/Post');
 
@@ -66,7 +67,7 @@ const server = new ApolloServer({
 
 
 /*-------------- Default server's port in 4000 --------------*/
-server.listen(4500).then(({
+server.listen({ port: process.env.PORT || 4500 }).then(({
   url
 }) => {
   console.log(`Server listening on ${url} 🗿 🚀`);
